@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="content-wrapper">
+  <div>
+    <a href="/?rand=1">Random choice</a>
+  </div>
+  <div class="file-tree">
+    <h2>Choose for yourself (show top 100)</h2>
+    <ul>
+      {% for image_path in image_paths %}
+      <li><a href={{image_path.link}}>{{ image_path.name }}</a></li>
+      {% else %}
+      <li>no data</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% if message %}
+<div>
+  {{ message }}
+</div>
+{% else %}
+
+{% endif %}
+
+
+{% endblock %}
