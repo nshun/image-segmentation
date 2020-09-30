@@ -19,7 +19,7 @@ Image segementation tool with flask.
 │   ├── static/
 │   │   └── dataset/
 │   │       ├── target       # target dir (*.png or *.jpg)
-│   │       └── annotaions   # annotations (*.txt)
+│   │       └── annotations   # annotations (*.txt)
 │   ├── Dockerfile
 │   ├── requirements.txt
 │   └── templates
