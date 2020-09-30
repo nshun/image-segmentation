@@ -4,12 +4,13 @@ Image segementation tool with flask.
 
 ## Requirement
 
+- make
 - docker
 - docker-componse
 - firewall `80/tcp`
 - copy dataset dir to `./dataset`
 
-### dataset dir tree
+### file tree
 
 ```
 .
@@ -29,18 +30,12 @@ Image segementation tool with flask.
 
 ## How to Use
 
-1. Build docker image
+1. Start docker-compose
 
 ```
-docker build ./ -t monitor
+make start
 ```
 
-2. Run as docker container
-
-```
-docker run -d -p 80:80 -v "$(pwd)"/src:/src --restart always monitor
-```
-
-3. Access to WEB server
+2. Access to WEB server
 
 [http://localhost/](http://localhost/)
