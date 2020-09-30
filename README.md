@@ -1,18 +1,30 @@
-# flask-test
+# image-segmentation
+
+Image segementation tool with flask.
 
 ## Requirement
 
-- [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+- docker
+- docker-componse
 - firewall `80/tcp`
-- mount dataset dir to `./dataset`
+- copy dataset dir to `./dataset`
 
 ### dataset dir tree
 
 ```
 .
-└── dataset/
-    ├── target          # target dir (to attach)
-    └── attributes      # area and class data
+├── app/
+│   ├── app.py
+│   ├── static/
+│   │   └── dataset/
+│   │       ├── target       # target dir (*.png or *.jpg)
+│   │       └── annotaions   # annotations (*.txt)
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── templates
+├── docker-compose.yml
+├── Makefile
+└── README.md   
 ```
 
 ## How to Use
@@ -28,3 +40,7 @@ docker build ./ -t monitor
 ```
 docker run -d -p 80:80 -v "$(pwd)"/src:/src --restart always monitor
 ```
+
+3. Access to WEB server
+
+[http://localhost/](http://localhost/)
