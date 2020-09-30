@@ -10,7 +10,7 @@ Image segementation tool with flask.
 - firewall `80/tcp`
 - copy dataset dir to `./dataset`
 
-### file tree
+### File tree
 
 ```
 .
@@ -30,7 +30,9 @@ Image segementation tool with flask.
 
 ## How to Use
 
-1. Start docker-compose
+1. Copy dataset dir
+
+2. Start docker-compose
 
 ```
 make start
